@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFLab.Models.DataLayer;
@@ -38,4 +39,9 @@ public partial class Customer
     [ForeignKey("State")]
     [InverseProperty("Customers")]
     public virtual State StateNavigation { get; set; } = null!;
+
+    public string GetCustomerText(string sep)
+    {
+        return $"{CustomerId.ToString()}{sep}{Name}{sep}{Address}";
+    }
 }

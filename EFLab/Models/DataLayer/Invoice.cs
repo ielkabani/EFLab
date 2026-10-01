@@ -36,4 +36,9 @@ public partial class Invoice
 
     [InverseProperty("Invoice")]
     public virtual ICollection<InvoiceLineItem> InvoiceLineItems { get; set; } = new List<InvoiceLineItem>();
+
+    public string GetInvoiceText(string sep)
+    {
+        return $"{InvoiceId.ToString()}{sep}{InvoiceDate.ToString()}{sep}{ProductTotal.ToString("c")}";
+    }
 }

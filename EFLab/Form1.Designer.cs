@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             lstInvoices = new ListBox();
+            lstFiltered1 = new ListBox();
+            lstFiltered2 = new ListBox();
             SuspendLayout();
             // 
             // lstInvoices
@@ -36,14 +38,32 @@
             lstInvoices.FormattingEnabled = true;
             lstInvoices.Location = new Point(12, 27);
             lstInvoices.Name = "lstInvoices";
-            lstInvoices.Size = new Size(772, 354);
+            lstInvoices.Size = new Size(772, 179);
             lstInvoices.TabIndex = 0;
+            // 
+            // lstFiltered1
+            // 
+            lstFiltered1.FormattingEnabled = true;
+            lstFiltered1.Location = new Point(9, 231);
+            lstFiltered1.Name = "lstFiltered1";
+            lstFiltered1.Size = new Size(367, 179);
+            lstFiltered1.TabIndex = 1;
+            // 
+            // lstFiltered2
+            // 
+            lstFiltered2.FormattingEnabled = true;
+            lstFiltered2.Location = new Point(393, 232);
+            lstFiltered2.Name = "lstFiltered2";
+            lstFiltered2.Size = new Size(390, 179);
+            lstFiltered2.TabIndex = 2;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lstFiltered2);
+            Controls.Add(lstFiltered1);
             Controls.Add(lstInvoices);
             Name = "Form1";
             Text = "Form1";
@@ -54,5 +74,7 @@
         #endregion
 
         private ListBox lstInvoices;
+        private ListBox lstFiltered1;
+        private ListBox lstFiltered2;
     }
 }
